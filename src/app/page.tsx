@@ -37,7 +37,7 @@ export default function Home() {
       refetchOnWindowFocus: false,
       refetchOnReconnect: false,
       refetchInterval: false,
-      staleTime: Infinity,
+      refetchOnMount: "always",
     },
   });
 
@@ -62,7 +62,7 @@ export default function Home() {
       refetchOnWindowFocus: false,
       refetchOnReconnect: false,
       refetchInterval: false,
-      staleTime: Infinity,
+      refetchOnMount: "always",
     },
   });
 

@@ -1,25 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { ThemeToggle } from "@/components/theme-toggle";
 import Link from "next/link";
-import { Clock3, Home, PlusCircle } from "lucide-react";
+import { Home, PlusCircle } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const [time, setTime] = useState<string>("");
   const pathname = usePathname();
-
-  useEffect(() => {
-    const updateTime = () => {
-      setTime(new Date().toLocaleTimeString());
-    };
-
-    updateTime();
-    const id = setInterval(updateTime, 30000);
-    return () => clearInterval(id);
-  }, []);
 
   return (
     <nav className="hidden md:flex sticky top-0 z-40 border-b bg-background/80 backdrop-blur">
@@ -58,10 +46,6 @@ export default function Navbar() {
           </div>
         </div>
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-1 rounded-full border px-3 py-1 text-xs text-muted-foreground">
-            <Clock3 className="h-3.5 w-3.5" />
-            <span>{time}</span>
-          </div>
           <ThemeToggle />
           <ConnectButton />
         </div>
