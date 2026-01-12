@@ -7,29 +7,29 @@ import { WagmiProvider, http } from "wagmi";
 import { type Chain } from "viem";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const qie = {
-  id: 1983,
-  name: 'QIE Testnet',
+const somniaTestnet = {
+  id: 50312,
+  name: 'Somnia Testnet',
   nativeCurrency: {
     decimals: 18,
-    name: 'QIE',
-    symbol: 'QIE',
+    name: 'STT',
+    symbol: 'STT',
   },
   
   
   rpcUrls: {
-    default: { http: ['https://rpc1testnet.qie.digital/'] },
-    public: { http: ['https://rpc1testnet.qie.digital/'] },
+    default: { http: ['https://dream-rpc.somnia.network/'] },
+    public: { http: ['https://dream-rpc.somnia.network/'] },
   },
   blockExplorers: {
-    default: { name: 'QIE Scan', url: 'https://testnet.qie.digital' },
+    default: { name: 'Somnia Explorer', url: 'https://shannon-explorer.somnia.network/' },
   },
 } as const satisfies Chain;
 
 const config = getDefaultConfig({
   appName: "NFT Donation Platform",
   projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID ?? "",
-  chains: [qie],
+  chains: [somniaTestnet],
   wallets: [
     {
       groupName: "Preferred",
@@ -37,7 +37,7 @@ const config = getDefaultConfig({
     },
   ],
   transports: {
-    [qie.id]: http(process.env.NEXT_PUBLIC_RPC_URL || "https://testnetqierpc1.digital/"),
+    [somniaTestnet.id]: http(process.env.NEXT_PUBLIC_RPC_URL || "https://dream-rpc.somnia.network/"),
   },
   ssr: true,
 });
