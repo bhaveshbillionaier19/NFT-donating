@@ -11,7 +11,7 @@ async function main() {
   // 1. Load the compiled contract artifact
   // This file was created when you ran 'npx hardhat compile'
   const artifactPath = "./artifacts/contracts/NFTDonation.sol/NFTDonation.json";
-  
+
   if (!fs.existsSync(artifactPath)) {
     console.error("❌ Error: Artifact not found. Run 'npx hardhat compile' first.");
     process.exit(1);
@@ -22,7 +22,7 @@ async function main() {
   const bytecode = artifact.bytecode;
 
   // 2. Setup Provider and Wallet
-  const rpcUrl = "https://rpc1testnet.qie.digital/";
+  const rpcUrl = "https://dream-rpc.somnia.network/";
   const privateKey = process.env.PRIVATE_KEY;
 
   if (!privateKey) {
@@ -30,10 +30,10 @@ async function main() {
     process.exit(1);
   }
 
-  // Connect to the QIE Testnet
+  // Connect to the Somnia Testnet
   const provider = new ethers.JsonRpcProvider(rpcUrl);
   const wallet = new ethers.Wallet(privateKey, provider);
-  
+
   console.log(`🔌 Connected to wallet: ${wallet.address}`);
 
   // 3. Create the Factory
@@ -42,7 +42,7 @@ async function main() {
   // 4. Deploy
   console.log("📤 Sending deployment transaction...");
   const contract = await factory.deploy();
-  
+
   console.log("⏳ Waiting for transaction to be mined...");
   await contract.waitForDeployment();
 
