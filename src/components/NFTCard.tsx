@@ -137,7 +137,7 @@ export default function NFTCard({ nft, onDelete, onDonation, onTotalsChange }: N
         </CardContent>
         <CardFooter className="flex justify-between items-center p-4 bg-muted/50">
           <div>
-              <p className="text-sm font-bold">{`${formatEther(computedTotalDonations)} ETH`}</p>
+              <p className="text-sm font-bold">{`${formatEther(computedTotalDonations)} CRO`}</p>
               <p className="text-xs text-muted-foreground">Total Donated</p>
           </div>
           <Dialog>
@@ -147,13 +147,13 @@ export default function NFTCard({ nft, onDelete, onDonation, onTotalsChange }: N
             <DialogContent>
             <DialogHeader>
               <DialogTitle>Donate to {metadata?.name || `NFT #${tokenId}`}</DialogTitle>
-              <DialogDescription>Your support helps the creator. Enter the amount of ETH you'd like to donate.</DialogDescription>
+              <DialogDescription>Your support helps the creator. Enter the amount of CRO you'd like to donate.</DialogDescription>
             </DialogHeader>
             <div className="space-y-4">
                 <div>
                   <Input 
                     type="number" 
-                    placeholder="0.05 ETH" 
+                    placeholder="0.05 CRO" 
                     value={donationAmount} 
                     onChange={(e) => setDonationAmount(e.target.value)} 
                     disabled={isProcessing}
@@ -169,7 +169,7 @@ export default function NFTCard({ nft, onDelete, onDonation, onTotalsChange }: N
                             events.map((event, index) => (
                                 <div key={index} className="text-xs text-muted-foreground flex justify-between">
                                     <span>{shortenedAddress((event as any).args.donor)}</span>
-                                    <span>{formatEther((event as any).args.amount)} ETH</span>
+                                    <span>{formatEther((event as any).args.amount)} CRO</span>
                                 </div>
                             ))
                         ) : (
