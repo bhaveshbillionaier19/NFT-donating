@@ -7,6 +7,7 @@ import { type Abi } from 'viem';
 import Image from 'next/image';
 import NFTCard from "@/components/NFTCard";
 import SkeletonCard from "@/components/SkeletonCard";
+import AIRecommendations from "@/components/AIRecommendations";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { formatEther } from "viem";
@@ -181,6 +182,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {visibleNfts.length > 0 && (
+        <AIRecommendations nfts={visibleNfts} />
+      )}
 
       {visibleNfts.length > 0 && (
         <section className="grid gap-6 lg:grid-cols-2">

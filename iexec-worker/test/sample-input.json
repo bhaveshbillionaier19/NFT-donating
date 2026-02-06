@@ -1,0 +1,54 @@
+{
+    "userAddress": "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb",
+    "donationHistory": [
+        {
+            "nftId": "1",
+            "nftName": "Clean Water Initiative",
+            "amount": "0.05",
+            "category": "Environment"
+        },
+        {
+            "nftId": "3",
+            "nftName": "Education for All",
+            "amount": "0.1",
+            "category": "Education"
+        }
+    ],
+    "allNFTs": [
+        {
+            "tokenId": "1",
+            "name": "Clean Water Initiative",
+            "description": "Providing clean water to rural communities",
+            "category": "Environment",
+            "totalDonations": "0.5"
+        },
+        {
+            "tokenId": "2",
+            "name": "Wildlife Conservation",
+            "description": "Protecting endangered species",
+            "category": "Environment",
+            "totalDonations": "0.3"
+        },
+        {
+            "tokenId": "3",
+            "name": "Education for All",
+            "description": "Building schools in developing nations",
+            "category": "Education",
+            "totalDonations": "0.8"
+        },
+        {
+            "tokenId": "4",
+            "name": "Healthcare Access",
+            "description": "Mobile clinics for remote areas",
+            "category": "Healthcare",
+            "totalDonations": "0.2"
+        },
+        {
+            "tokenId": "5",
+            "name": "Renewable Energy",
+            "description": "Solar panels for villages",
+            "category": "Environment",
+            "totalDonations": "0.15"
+        }
+    ]
+}

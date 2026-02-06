@@ -1,0 +1,23 @@
+{
+    "name": "ai-donation-recommender",
+    "version": "1.0.0",
+    "description": "iExec worker for AI-powered NFT donation recommendations using GPT",
+    "main": "src/app.js",
+    "type": "module",
+    "scripts": {
+        "start": "node src/app.js",
+        "test": "node src/app.js < test/sample-input.json"
+    },
+    "keywords": [
+        "iexec",
+        "ai",
+        "gpt",
+        "nft",
+        "donation"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "openai": "^4.28.0"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "description": {
+        "name": "AI Donation Recommender",
+        "description": "AI-powered NFT donation recommendation engine using GPT",
+        "license": "MIT",
+        "author": "NFT Donation Platform",
+        "social": {
+            "website": ""
+        },
+        "logo": "",
+        "type": "DOCKER",
+        "privacy": {
+            "tee": "scone",
+            "attestation": "native"
+        }
+    },
+    "buyConf": {
+        "type": "IMAGE",
+        "params": {
+            "SMSSecretId": [
+                "OPENAI_API_KEY"
+            ]
+        }
+    },
+    "app": {
+        "owner": "0x0000000000000000000000000000000000000000",
+        "name": "ai-donation-recommender",
+        "type": "DOCKER",
+        "multiaddr": "registry.hub.docker.com/yournamespace/ai-donation-recommender:1.0.0",
+        "checksum": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "mrenclave": ""
+    }
+}
